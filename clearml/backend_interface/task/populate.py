@@ -217,7 +217,7 @@ class CreateAndPopulate(object):
                     repo_info.script['diff'] = a_repo_info.script['diff'] or ''
                 repo_info.script['entry_point'] = a_repo_info.script['entry_point']
                 if a_create_requirements:
-                    repo_info['requirements'] = a_repo_info.script.get('requirements') or {}
+                    repo_info.script['requirements'] = a_repo_info.script.get('requirements') or {}
 
         # check if we have no repository and no requirements raise error
         if self.raise_on_missing_entries and (not self.requirements_file and not self.packages) \
